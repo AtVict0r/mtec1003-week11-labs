@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Floor?</title>
+</head>
+
+<body>
+    <script>
+        const maximumFloors = 26;
+        var currentFloor = parseInt(prompt("On what floor of the building is your office?"), 10);
+
+        while (currentFloor < 1 || currentFloor > maximumFloors) {
+            console.log("You entered: " + String(currentFloor) + " which is not within the range of 1 - " + String(maximumFloors) +
+                " which are the available floors in this building. Try again.");
+            currentFloor = parseInt(prompt("On what floor of the building is your office?"), 10);
+        }
+
+        console.log("Congratulations! You work on floor " + String(currentFloor));
+    </script>
+</body>
+
+</html>
